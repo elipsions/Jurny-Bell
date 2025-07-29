@@ -1,3 +1,4 @@
+
 :root{
   --cream:#f7f3ea;
   --charcoal:#1c1a16;
@@ -23,6 +24,7 @@ nav a:hover{color:var(--brass)}
 .hero .btn{display:inline-block;background:var(--brass);color:white;padding:14px 26px;margin-top:20px;border-radius:10px;font-weight:bold;font-size:18px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
 .hero .btn:hover{background:var(--brass-dark)}
 .hero .bell{margin-top:40px;width:260px}
+.hero .badge{margin-top:20px;width:120px}
 
 /* Story */
 .story{padding:70px 20px;text-align:center;background:var(--cream)}
@@ -32,13 +34,21 @@ nav a:hover{color:var(--brass)}
 /* Features */
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;padding:60px 20px;background:#fff}
 .feature{text-align:center;padding:20px;border:1px solid #eee;border-radius:10px;background:var(--cream)}
+.feature img{width:50px;margin-bottom:10px}
 .feature h3{font-size:22px;margin-top:10px}
 
-/* CTA */
+/* Testimonials */
+.testimonials{background:#fff;text-align:center;padding:50px 20px}
+.testimonials h2{font-size:28px;font-weight:800;margin-bottom:20px}
+.slider{max-width:600px;margin:0 auto}
+.quote{font-size:18px;margin-bottom:10px}
+.author{font-size:16px;color:#666}
+
+/* CTA & Form */
 .cta{padding:70px 20px;text-align:center;background:var(--brass);color:white}
 .cta h2{font-size:32px;font-weight:800}
 .cta .price{font-size:22px;margin:10px 0}
-.cta .btn{background:white;color:var(--brass-dark);padding:14px 28px;font-weight:bold;font-size:18px;border-radius:10px}
+.cta iframe{width:100%;max-width:600px;height:450px;border:none;margin-top:20px}
 
 /* Footer */
 footer{text-align:center;padding:30px 20px;background:#1c1a16;color:#aaa;font-size:14px}
