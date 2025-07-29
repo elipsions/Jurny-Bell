@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thanks — Journey Bell</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="canvas-wrap"><canvas id="confetti"></canvas></div>
+<section class="thanks">
+  <h1>Thanks for Preordering!</h1>
+  <p>We’ve received your request. Check your inbox for a confirmation email. <br>Road gremlins don’t stand a chance now. 🛎️</p>
+  <a href="index.html" class="btn">Back to Homepage</a>
+</section>
+
+<script>
+// Simple confetti
+const canvas = document.getElementById('confetti');
+const ctx = canvas.getContext('2d');
+function resize(){canvas.width = window.innerWidth; canvas.height = window.innerHeight;}
+window.addEventListener('resize', resize); resize();
+const pieces = Array.from({length: 180}).map(()=> ({
+  x: Math.random()*canvas.width,
+  y: Math.random()*canvas.height - canvas.height,
+  r: 4+Math.random()*6,
+  s: 1+Math.random()*2.5,
+  a: Math.random()*Math.PI*2
+}));
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(const p of pieces){
+    p.y += p.s; p.a += 0.02;
+    if(p.y > canvas.height) p.y = -10;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.a);
+    ctx.fillStyle = ['#b68a40','#f7f3ea','#2c2a25','#d6b26a'][Math.floor(Math.random()*4)];
+    ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r);
+    ctx.restore();
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
