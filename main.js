@@ -1,1 +1,0 @@
-document.querySelectorAll('.marquee span').forEach((el)=>{ el.innerHTML = el.innerHTML + ' · ' + el.innerHTML + ' · ' + el.innerHTML; });
